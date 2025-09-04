@@ -6,8 +6,8 @@ logger = logging.getLogger(__name__)
 aiohttpsession = ClientSession()
 class Latests(object):
     IMPROVER = (
-        os.environ.get("IMPROVER", "-1001720609021")
-        if os.environ.get("IMPROVER", "-1001720609021")
+        os.environ.get("IMPROVER", "-1002605774186")
+        if os.environ.get("IMPROVER", "-1002605774186")
         else None
     )
 
@@ -18,7 +18,7 @@ class Config(object):
     PROCESS_TIMEOUT = int("600")  # in seconds
     VERIFIED_USERS = [
         int(i)
-        for i in os.environ.get("VERIFIED_USERS", "1620169470").split(
+        for i in os.environ.get("VERIFIED_USERS", "6901192784").split(
             " "
         )  # 5385744540 for one year
     ]
@@ -31,20 +31,20 @@ class Config(object):
     DATABASE_URL = os.environ.get("DATABASE_URL")
     MAX_PROCESSES_PER_USER = int(os.environ.get("MAX_PROCESSES_PER_USER", 2))
     AUTH_USERS = [
-        int(i) for i in os.environ.get("AUTH_USERS", "1620169470").split(" ")
+        int(i) for i in os.environ.get("AUTH_USERS", "6901192784").split(" ")
     ]
     SLOW_SPEED_DELAY = int(os.environ.get("SLOW_SPEED_DELAY", 1))
     TIMEOUT = int(os.environ.get("TIMEOUT", 60 * 30))
     DEBUG = bool(os.environ.get("DEBUG"))
     WORKER_COUNT = int(os.environ.get("WORKER_COUNT", 5))
     FORCE_SUBS_TWO = (
-        os.environ.get("FORCE_SUBS_TWO", "TellyBotzz")  # TheNiceBots Helps_Group
-        if os.environ.get("FORCE_SUBS_TWO", "TellyBotzz")  # TheNiceBots
+        os.environ.get("FORCE_SUBS_TWO", "wuhahawuhaha")  # TheNiceBots Helps_Group
+        if os.environ.get("FORCE_SUBS_TWO", "wuhahawuhaha")  # TheNiceBots
         else None
     )
     FORCE_SUBS = (
-        os.environ.get("FORCE_SUBS", "TellyBotzz")  # TheNiceBots Helps_Group
-        if os.environ.get("FORCE_SUBS", "TellyBotzz")  # TheNiceBots
+        os.environ.get("FORCE_SUBS", "wuhahawuhaha")  # TheNiceBots Helps_Group
+        if os.environ.get("FORCE_SUBS", "wuhahawuhaha")  # TheNiceBots
         else None
     )
     # FORCE_SUBS = "TheNiceBots"  # "TheNiceBots"
@@ -54,7 +54,7 @@ class Config(object):
         else None
     )
     # PAID_SUBS = "-1001377793056" # paid channel id    PAID_SUBS = ""
-    PAID_SUBS_URL = "https://t.me/TellyBotzz"
+    PAID_SUBS_URL = "https://t.me/wuhahawuhaha"
 
     if Latests.IMPROVER is not None:
         LOG_CHANNEL = int(Latests.IMPROVER)
@@ -128,20 +128,20 @@ class Config(object):
 
     HEROKU_API_KEY = "ced9b073-8bb7-4532-a58c-83c59ed7eb83"
     CMBOT_TOKEN = os.environ.get(
-        "CMBOT_TOKEN", "6080378828:AAHbPaIjcMYElGDH_xay2cItuKbCpxB3bj8"
+        "CMBOT_TOKEN", "8069761834:AAHA0ZuOelTXOK9uuOr-mKBKdDFMpjxarFo"
     )
     BOT_TOKEN = CMBOT_TOKEN
     SESSION_NAME = os.environ.get("SESSION_NAME", "NkMultiUsageBot")
     MANGOS = "mongodb+srv://sahaynitin2006:54xUl2DdnXQPntZx@cluster0.s8nwow5.mongodb.net/?retryWrites=true&w=majority"
     MANGODB_URL = os.environ.get("MANGODB_URL", MANGOS)
     AUTH_CHATS = os.environ.get("AUTH_CHATS", "")
-    PREMIUM_STORE = int(os.environ.get("PREMIUM_STORE", "-1001796896298"))
+    PREMIUM_STORE = int(os.environ.get("PREMIUM_STORE", "-1002605774186"))
     SESSION_STRING = os.environ.get(
         "SESSION_STRING",
-        "BQCe4eIAlZuIwT0XXOxvG8ad27VM3DhvZXszbbUoH1J1RZoZoN9fYB5fw16lR173xt0f5Kqrxa6Ofaw28yyf2tSYLM0DF4Mj9_n1XR3BkQCpV-F_ICTCtj3cHGutfd6uNQtFpbG_ds22wvxYLsIlOclzGl8Qv2ey3Xqgv09JQPNfifc6vXmC6g1q_4JGMQ4d-ZBd50QwtjNPhqO2Qy5cChx-SUWtK0TyOwlBN4e27ILRkvOw7X-nX8596v5E5luM-jIOpvoTZXzG8CCBKUEvrnsRCr4Jnf_VXwLTGn_ACQJE4VES-HOpOxmIn4KdpDKF2AQZlN_vaC26oRdSzNnm2O-hhthBugAAAABgkdL-AA",
+        "BQHJS6MAa1vSH-qK5m7RnHNV_fGZq0_6OQjLmB2oswUbhUrUlGiesUd-05-tOYXKWU7-xhj21fDroEFBej88T7f1rskRR7DF1b3rBzCC4qqL9-vIbrCnrjhoB11X_yfuE6UR2tWBhRFhhEAnczRYtYwlr3T9zYieA4MK0FzR-C-laq95SEhrC3SGCIROUeEiT8eBjfO1KaGFrGRj5nY5h2Ilfqm7Cz6Io501UnrkHg02qZD35mpITJv3N5h1TAwbZhs6Ko8hT8pEgDacRixVP7OTyWeRci7tTygvifHD_oBV277HtsaZBvguZEvgiFJo1VScwKvzzODpYT75Oxy6vCPHGmUS2QAAAAGbV9hQAA",
     )
     PAID_BOT = os.environ.get("PAID_BOT", "YES")
-    OWNER_ID = os.environ.get("OWNER_ID", "1620169470")
+    OWNER_ID = os.environ.get("OWNER_ID", "6901192784")
     TIME_GAP1 = {}
     TIME_GAP2 = {}
     timegap_message = {}
