@@ -1,0 +1,16 @@
+{
+  "name": "V8",
+  "description": "V8",
+  "keywords": ["v8"],
+  "success_url": "https://github.com/Chitranjan6G",
+  "logo": "https://telegra.ph/file/471965ceae77fe033c398.png",
+  "website": "https://github.com/Chitranjan5G",
+  "repository": "https://github.com/Chitranjan6G/V8",
+  "stack": "container",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  chitranjan:
+    build: .
+    command: bash start.sh
+    restart: on-failure
+    ports:
+      - "30:30"
