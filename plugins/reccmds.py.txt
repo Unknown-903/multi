@@ -1,0 +1,30 @@
+from pyrogram import Client, filters
+from plugins.recording import sudo_users, multi_rec, check_user, getChannels
+from database.database import Database
+from config import Config
+from plugins.processors import media_uploader, Chitranjan as CH
+
+@Client.on_message(filters.chat(sudo_users) & filters.incoming & filters.command(['multirec']) & filters.incoming & filters.text)
+async def multirec_cmd(bot, CH, message):
+
+    auth_user = check_user(message)
+    if auth_user is None:
+        return
+
+    if len(message.text.split()) < 3:
+        await bot.send_message("<b>Syntax: </b>`/multirec [channelName] [duration] | [filename]`")
+        return
+
+    multi_rec(bot, CH, message)
+
+    
+    
+@Client.on_message(filters.incoming & filters.command(['channels']) & filters.text)
+async def multirec_cmd(bot, CH, message):
+
+    auth_user = check_user(message)
+    if auth_user is None:
+        return
+
+    await getChannels(bot, CH, message)
+    
